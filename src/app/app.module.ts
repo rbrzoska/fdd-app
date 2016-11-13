@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -9,6 +10,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { RomansComponent } from './romans/romans.component';
 import { GaulsComponent } from './gauls/gauls.component';
 import { HomeComponent } from './home/home.component';
+
+import { PeopleService } from './services/people.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +25,10 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [PeopleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
