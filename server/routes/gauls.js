@@ -7,7 +7,7 @@ var gauls = [
     {
         id: 1,
         name: "Obelix",
-        username: "obelix.jpg"
+        avatar: "obelix.jpg"
     }
 ]
 
