@@ -1,4 +1,9 @@
-<h3>List of roman celebrities</h3>
-<div>
-  <div *ngFor="let roman of romans">{{roman.name}}</div>
-</div>
+<md-card>
+  Lista najważniejszych Rzymian
+  <md-list>
+    <md-list-item *ngFor="let roman of romans">
+      <img md-list-avatar src="/assets/images/{{roman.avatar}}">
+      <h3 md-line> {{roman.name}} </h3>
+    </md-list-item>
+  </md-list>
+</md-card>

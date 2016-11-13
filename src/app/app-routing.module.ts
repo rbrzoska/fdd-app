@@ -7,8 +7,8 @@ import { GaulsComponent } from './gauls/gauls.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'romans', component: RomansComponent },
-  { path: 'gauls', component: GaulsComponent },
+  { path: 'rzymianie', component: RomansComponent },
+  { path: 'galowie', component: GaulsComponent },
 ];
 
 @NgModule({

@@ -41,7 +41,7 @@ server.use(restify.bodyParser({ mapParams: false }));
 server.use(restify.queryParser());
 server.use(restify.gzipResponse());
 server.pre(restify.pre.sanitizePath());
-
+server.use(restify.CORS());
 /*jslint unparam:true*/
 // Default error handler. Personalize according to your needs.
 server.on('uncaughtException', function (req, res, route, err) {
