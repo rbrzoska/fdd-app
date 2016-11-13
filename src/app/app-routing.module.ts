@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { RomansComponent } from './romans/romans.component';
-import { GreeksComponent } from './greeks/greeks.component';
 import { GaulsComponent } from './gauls/gauls.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', component: HomeComponent },
   { path: 'romans', component: RomansComponent },
-  { path: 'greeks', component: GreeksComponent },
   { path: 'gauls', component: GaulsComponent },
 ];
 
@@ -19,4 +17,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routedComponents = [AppComponent, RomansComponent, GreeksComponent, GaulsComponent];
+export const routedComponents = [HomeComponent, RomansComponent, GaulsComponent]

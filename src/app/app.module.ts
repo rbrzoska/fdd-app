@@ -7,16 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { RomansComponent } from './romans/romans.component';
-import { GreeksComponent } from './greeks/greeks.component';
 import { GaulsComponent } from './gauls/gauls.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     RomansComponent,
-    GreeksComponent,
-    GaulsComponent
+    GaulsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
