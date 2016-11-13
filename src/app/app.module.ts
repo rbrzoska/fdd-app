@@ -7,9 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { RomansComponent } from './romans/romans.component';
-import { GaulsComponent } from './gauls/gauls.component';
 import { HomeComponent } from './home/home.component';
+import { PeopleComponent } from './people/people.component';
+import { PeopleDetailsComponent } from './people-details/people-details.component';
 
 import { PeopleService } from './services/people.service';
 
@@ -17,9 +17,9 @@ import { PeopleService } from './services/people.service';
   declarations: [
     AppComponent,
     NavigationComponent,
-    RomansComponent,
-    GaulsComponent,
-    HomeComponent
+    HomeComponent,
+    PeopleComponent,
+    PeopleDetailsComponent
   ],
   imports: [
     BrowserModule,
