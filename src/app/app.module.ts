@@ -11,8 +11,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { PeopleComponent } from './people/people.component';
 import { PeopleDetailsComponent } from './people-details/people-details.component';
-
 import { PeopleService } from './services/people.service';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { PeopleService } from './services/people.service';
     NavigationComponent,
     HomeComponent,
     PeopleComponent,
-    PeopleDetailsComponent
+    PeopleDetailsComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

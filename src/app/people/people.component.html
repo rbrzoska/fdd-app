@@ -1,9 +1,10 @@
 <md-card>
-  Oto najważniejsi {{peopleType}}
+  Lista obywateli na rok 50 p.n.e.
   <md-list>
     <md-list-item *ngFor="let person of people">
       <img md-list-avatar src="/assets/images/{{person.avatar}}">
-      <a md-line [routerLink]="['/', person.type, person.id]"> {{person.name}} </a>
+      <a md-line [routerLink]="['/people', person.id]"> {{person.name}} </a>
     </md-list-item>
   </md-list>
 </md-card>
+

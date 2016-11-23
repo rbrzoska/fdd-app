@@ -1,20 +1,62 @@
-import { Person } from './../interfaces/person';
-import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import {Person} from './../interfaces/person';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
 
-import { Observable } from 'rxjs/Observable';
-import  'rxjs/Rx';
+const people: Person[] = [
+    {
+        id: 0,
+        nation: "rzym",
+        name: "Julek Cezar",
+        avatar: "julek.jpg"
+    },
+    {
+        id: 1,
+        nation: "rzym",
+        name: "Brutus",
+        avatar: "brutus.jpg"
+    },
+    {
+        id: 2,
+        nation: "gal",
+        name: "Asterix",
+        avatar: "asterix.jpg"
+    },
+    {
+        id: 3,
+        nation: "gal",
+        name: "Obelix",
+        avatar: "obelix.jpg"
+    }
+];
+
+const answers: string[] = [
+    "Ave Ja",
+    "Veni Vidi Vici",
+    "Zakończmy dyskusję nim rzucę cię lwom na pożarcie",
+    "Alea iacta est"
+];
 
 @Injectable()
 export class PeopleService {
 
-  constructor(private http: Http) { }
+    getAllPeople() {
+        return Observable.create(observer => {
+            observer.next(people);
+        })
+    }
 
-  getAllPeople(type: string): Observable<Person[]> {
-    return this.http.get(`http://localhost:8888/people/${type}`).map((res: Response) => res.json());
-  }
+    getPerson(id: number) {
+        return Observable.create(observer => {
+            observer.next(people.find((people) => people.id == id))
+        });
+    }
 
-  getPerson(type: string, id: string): Observable<Person> {
-    return this.http.get(`http://localhost:8888/people/${type}/${id}`).map((res: Response) => res.json());
-  }
+    getChatAnswer() {
+        return Observable.create(observer => {
+            setTimeout(() => {
+                observer.next(answers[Math.floor(Math.random() * answers.length)]);
+            }, 3000);
+        })
+    }
+
 }

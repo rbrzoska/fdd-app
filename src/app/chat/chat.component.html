@@ -1,0 +1,17 @@
+
+<md-card>
+  <md-input placeholder="Pytanie" id="question" (keyup.enter)="askCaesar()" [(ngModel)]="questionText">
+  </md-input>
+  <button md-button (click)="askCaesar()">Zapytaj Cezara</button>
+  <md-list dense>
+
+    <md-list-item *ngIf="pendingMessage">
+      <img md-list-avatar src="/assets/images/julek.jpg">
+      <a md-line> ... </a>
+    </md-list-item>
+    <md-list-item *ngFor="let message of chat">
+      <img md-list-avatar src="/assets/images/{{message.avatar}}">
+      <a md-line> {{message.text}} </a>
+    </md-list-item>
+  </md-list>
+</md-card>
