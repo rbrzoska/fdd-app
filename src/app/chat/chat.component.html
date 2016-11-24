@@ -6,11 +6,11 @@
   <md-list dense>
 
     <md-list-item *ngIf="pendingMessage">
-      <img md-list-avatar src="/assets/images/julek.jpg">
+      <img md-list-avatar src="assets/images/julek.jpg">
       <a md-line> ... </a>
     </md-list-item>
     <md-list-item *ngFor="let message of chat">
-      <img md-list-avatar src="/assets/images/{{message.avatar}}">
+      <img md-list-avatar src="assets/images/{{message.avatar}}">
       <a md-line> {{message.text}} </a>
     </md-list-item>
   </md-list>
